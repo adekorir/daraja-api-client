@@ -202,5 +202,8 @@ public class STKPush {
     }
 }
 ```
+## Update (31.08.2022)
+
+The code will be updated to utilize java-9+. Backward compatibility with java 8 will no longer work.
 
 Having trouble with your build or found a bug? [Create an issue!](https://github.com/brad-tech/daraja-api-client/issues)
