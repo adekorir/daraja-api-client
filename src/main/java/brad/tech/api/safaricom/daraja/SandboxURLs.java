@@ -2,23 +2,25 @@ package brad.tech.api.safaricom.daraja;
 
 public interface SandboxURLs {
 
+    String BASE = "https://sandbox.safaricom.co.ke";
+
     // auth
-    String OAUTH_URL = "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials";
+    String OAUTH_URL = String.format("%s/%s", BASE, "oauth/v1/generate?grant_type=client_credentials");
 
     // b2b
-    String B2C_URL = "https://sandbox.safaricom.co.ke/mpesa/b2c/v1/paymentrequest";
-    String B2B_URL = "https://sandbox.safaricom.co.ke/mpesa/b2b/v1/paymentrequest";
+    String B2C_URL = String.format("%s/mpesa/%s", BASE,"b2c/v1/paymentrequest");
+    String B2B_URL = String.format("%s/mpesa/%s", BASE,"b2b/v1/paymentrequest");
 
     // c2b
-    String C2B_REGISTER_URL_URL = "https://sandbox.safaricom.co.ke/mpesa/c2b/v1/registerurl";
-    String C2B_SIMULATE_TRANSACTION_URL = "https://sandbox.safaricom.co.ke/mpesa/c2b/v1/simulate";
+    String C2B_REGISTER_URL_URL = String.format("%s/mpesa/%s", BASE,"c2b/v1/registerurl");
+    String C2B_SIMULATE_TRANSACTION_URL = String.format("%s/mpesa/%s", BASE,"c2b/v1/simulate");
 
     // etc
-    String ACCOUNT_BALANCE_URL = "https://sandbox.safaricom.co.ke/mpesa/accountbalance/v1/query";
-    String TRANSACTION_STATUS_URL = "https://sandbox.safaricom.co.ke/mpesa/transactionstatus/v1/query";
-    String REVERSAL_URL = "https://sandbox.safaricom.co.ke/mpesa/reversal/v1/request";
+    String ACCOUNT_BALANCE_URL = String.format("%s/mpesa/%s", BASE,"accountbalance/v1/query");
+    String TRANSACTION_STATUS_URL = String.format("%s/mpesa/%s", BASE,"transactionstatus/v1/query");
+    String REVERSAL_URL = String.format("%s/mpesa/%s", BASE,"reversal/v1/request");
 
     // lipa na mpesa
-    String LIPA_NA_MPESA_STK_PUSH_URL = "https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest";
-    String LIPA_NA_MPESA_QUERY_URL = "https://sandbox.safaricom.co.ke/mpesa/stkpushquery/v1/query";
+    String LIPA_NA_MPESA_STK_PUSH_URL = String.format("%s/mpesa/%s", BASE,"stkpush/v1/processrequest");
+    String LIPA_NA_MPESA_QUERY_URL = String.format("%s/mpesa/%s", BASE,"stkpushquery/v1/query");
 }
