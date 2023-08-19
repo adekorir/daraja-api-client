@@ -1,4 +1,4 @@
-package brad.tech.api.safaricom.daraja;
+package com.adekorir.oss.daraja.api;
 
 public interface SandboxURLs {
 

@@ -1,4 +1,4 @@
-package brad.tech.api.safaricom.daraja;
+package com.adekorir.oss.daraja.api;
 
 /**
  * This exception class is a simple wrapper for exceptions thrown by connections.

@@ -1,4 +1,4 @@
-package brad.tech.api.safaricom.daraja;
+package com.adekorir.oss.daraja.api;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.http.Header;

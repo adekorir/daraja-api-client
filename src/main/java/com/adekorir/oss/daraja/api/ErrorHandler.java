@@ -1,4 +1,4 @@
-package brad.tech.api.safaricom.daraja;
+package com.adekorir.oss.daraja.api;
 
 /**
  * This provides exception handling functionalities to the client and subclasses.
