@@ -1,8 +1,8 @@
-package brad.tech.api.safaricom.daraja.v1.c2b;
+package com.adekorir.oss.daraja.api.v1.c2b;
 
-import brad.tech.api.safaricom.daraja.DarajaClientBase;
-import brad.tech.api.safaricom.daraja.DarajaException;
-import brad.tech.api.safaricom.daraja.DarajaStandardResponse;
+import com.adekorir.oss.daraja.api.DarajaClientBase;
+import com.adekorir.oss.daraja.api.DarajaException;
+import com.adekorir.oss.daraja.api.DarajaStandardResponse;
 import org.apache.http.client.methods.HttpPost;
 
 import java.io.IOException;

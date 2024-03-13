@@ -92,7 +92,6 @@
             <scope>test</scope>
         </dependency>
 
-
     </dependencies>
 
     <scm>
@@ -105,7 +104,7 @@
         <!-- Register yourselves here -->
         <developer>
             <id>adekorir</id>
-            <name>Adams 'Sadam' Korir</name>
+            <name>Adams Korir</name>
             <url>https://adekorir.com</url>
             <organization>BRAD Technologies</organization>
             <organizationUrl>https://brad-tech.github.io</organizationUrl>

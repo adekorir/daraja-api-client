@@ -1,7 +1,7 @@
-package brad.tech.api.safaricom.daraja.v1.lnm;
+package com.adekorir.oss.daraja.api.v1.lnm;
 
-import brad.tech.api.safaricom.daraja.DarajaClientBase;
-import brad.tech.api.safaricom.daraja.DarajaException;
+import com.adekorir.oss.daraja.api.DarajaClientBase;
+import com.adekorir.oss.daraja.api.DarajaException;
 import org.apache.http.client.methods.HttpPost;
 
 import java.io.IOException;
@@ -39,7 +39,7 @@ public class STKPushClient extends DarajaClientBase implements LipaNaMpesaOnline
                 response.setResultCode(resultCode);
             }
         } catch (IOException ex) {
-            String il8nMessage = "" + il8n.getString("errorEstablishingLink");
+            String il8nMessage = il8n.getString("errorEstablishingLink");
             String message = il8nMessage.replace("#{service}", "Lipa na M-Pesa Online");
             throw new DarajaException(message, ex);
         }

@@ -1,14 +1,12 @@
-package brad.tech.api.safaricom.daraja.v1.auth;
+package com.adekorir.oss.daraja.api.v1.auth;
 
-import brad.tech.api.safaricom.daraja.DarajaClientBase;
-import brad.tech.api.safaricom.daraja.DarajaException;
-import brad.tech.api.safaricom.daraja.SandboxURLs;
-import org.apache.http.client.methods.HttpGet;
+import com.adekorir.oss.daraja.api.DarajaClientBase;
+import com.adekorir.oss.daraja.api.DarajaException;
+import com.adekorir.oss.daraja.api.SandboxURLs;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
-import java.util.HashMap;
 
 public class OAuthAPIClient extends DarajaClientBase {
 
@@ -79,7 +77,7 @@ public class OAuthAPIClient extends DarajaClientBase {
         request.addHeader("Cache-Control", "no-cache");
 
         try {
-            HashMap map = getJsonPayload(request).getJsonMap();
+            var map = getJsonPayload(request).getJsonMap();
             if (map != null) {
                 String accessToken = (String) map.get("access_token");
                 long expiresIn;
@@ -92,7 +90,7 @@ public class OAuthAPIClient extends DarajaClientBase {
                 oAuthResponse = new OAuthResponse(accessToken, expiresIn);
             }
         } catch (IOException ex) {
-            throw new DarajaException("Error establishing link to MPesa's OAuth API Service", ex);
+            throw new DarajaException("Error establishing link to MPesa OAuth API Service", ex);
         }
 
         return oAuthResponse;

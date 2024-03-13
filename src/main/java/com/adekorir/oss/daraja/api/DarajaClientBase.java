@@ -1,16 +1,11 @@
 package com.adekorir.oss.daraja.api;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.http.Header;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.client.methods.HttpUriRequest;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.Map;
 
 public abstract class DarajaClientBase implements ResourceBundleConsumer, ErrorHandler {
@@ -19,9 +14,14 @@ public abstract class DarajaClientBase implements ResourceBundleConsumer, ErrorH
     protected String accessToken;
     protected ErrorHandler errorHandler;
 
+    protected Logger logger;
+
     public DarajaClientBase(String url) {
         this.url = url;
         this.errorHandler = this;
+        this.logger = Logger.getLogger(DarajaClientBase.class.getName());
+
+        this.logger.setLevel(Level.INFO);
     }
 
     public String getUrl() {
@@ -99,13 +99,7 @@ public abstract class DarajaClientBase implements ResourceBundleConsumer, ErrorH
 
     @Override
     public void handleException(String message, Throwable exception) {
-        System.out.printf("[%5s] : Message: %s - Exception: %s - Cause: %s%n", "EXCEP",
-                message, exception.getMessage(),
-                exception.getCause() == null ? "" : exception.getCause().getMessage()
-        );
-
-        // print the stack trace too
-        exception.printStackTrace();
+        logger.log(Level.SEVERE, exception.getMessage());
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.adekorir.oss.daraja.api;
 
+import java.io.Serial;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -43,9 +44,7 @@ public class DarajaStandardResponse implements KeyValuePair {
     @Override
     public Map<String, String> getKeyValuePair() {
         return new HashMap<String, String>() {
-            /**
-             *
-             */
+            @Serial
             private static final long serialVersionUID = -2909706858545349395L;
 
             {

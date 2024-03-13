@@ -1,5 +1,7 @@
 package com.adekorir.oss.daraja.api;
 
+import java.io.Serial;
+
 /**
  * This exception class is a simple wrapper for exceptions thrown by connections.
  * <p>
@@ -10,6 +12,7 @@ package com.adekorir.oss.daraja.api;
  */
 public final class DarajaException extends Exception {
 
+    @Serial
     private static final long serialVersionUID = 1193740464191995855L;
 
     /**

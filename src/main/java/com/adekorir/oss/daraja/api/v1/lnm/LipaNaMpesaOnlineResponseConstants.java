@@ -19,7 +19,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package brad.tech.api.safaricom.daraja.v1.lnm;
+package com.adekorir.oss.daraja.api.v1.lnm;
 
 public interface LipaNaMpesaOnlineResponseConstants {
 

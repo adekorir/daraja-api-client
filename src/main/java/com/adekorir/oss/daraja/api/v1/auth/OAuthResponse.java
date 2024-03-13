@@ -1,7 +1,8 @@
-package brad.tech.api.safaricom.daraja.v1.auth;
+package com.adekorir.oss.daraja.api.v1.auth;
 
-import brad.tech.api.safaricom.daraja.KeyValuePair;
+import com.adekorir.oss.daraja.api.KeyValuePair;
 
+import java.io.Serial;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,52 +14,17 @@ import java.util.Map;
  * @see <a href="https://developer.safaricom.co.ke/docs#authentication">Authentication Docs</a>
  * @see KeyValuePair
  */
-public class OAuthResponse implements KeyValuePair {
-
-    private String accessToken;
-    private Long expiresIn;
-
-    public OAuthResponse() {
-    }
-
-    /**
-     * A convenience constructor.
-     *
-     * @param accessToken the access token representation
-     * @param expiresIn   the time the token expires in.
-     */
-    public OAuthResponse(String accessToken, long expiresIn) {
-        this.accessToken = accessToken;
-        this.expiresIn = expiresIn;
-    }
-
-    public String getAccessToken() {
-        return accessToken;
-    }
-
-    public void setAccess_token(String accessToken) {
-        this.accessToken = accessToken;
-    }
-
-    public Long getExpiresIn() {
-        return expiresIn;
-    }
-
-    public void setExpires_in(Long expires_in) {
-        this.expiresIn = expires_in;
-    }
+public record OAuthResponse(String access_token, long expires_in) implements KeyValuePair {
 
     @Override
     public Map<String, String> getKeyValuePair() {
-        return new HashMap<String, String>() {
-            /**
-             *
-             */
+        return new HashMap<>() {
+            @Serial
             private static final long serialVersionUID = 7609424242039285289L;
 
             {
-                put("access_token", accessToken);
-                put("expires_in", "" + expiresIn);
+                put("access_token", access_token());
+                put("expires_in", "" + expires_in());
             }
         };
     }
