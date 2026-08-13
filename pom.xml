@@ -12,7 +12,7 @@
 
     <properties>
         <jackson-version>2.15.2</jackson-version>
-        <apache-httpclient-version>5.2.1</apache-httpclient-version>
+        <apache-httpclient-version>5.6.3</apache-httpclient-version>
         <junit-version>5.10.0</junit-version>
     </properties>
 
